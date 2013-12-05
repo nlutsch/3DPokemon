@@ -6,7 +6,8 @@ public class BulbAttcks : MonoBehaviour
 
     public GameObject leafPrefab;
     public Camera c;
-
+	
+	
     void Update()
     {
         if (Input.GetButtonDown("Joystick 1A1"))
@@ -15,7 +16,7 @@ public class BulbAttcks : MonoBehaviour
         }
     }
 
-    void attackLeaf()
+    public void attackLeaf()
     {
         Vector3 charHeight = new Vector3(1f * c.transform.rotation.x, 2.1f, 1.5f * c.transform.rotation.z);
         Instantiate(leafPrefab, this.transform.position + charHeight, c.transform.rotation);
