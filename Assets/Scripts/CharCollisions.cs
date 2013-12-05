@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CharCollisions : MonoBehaviour {
 
-    public HealthBar2 hp2;
+
 
 	// Use this for initialization
 	void Start () {
@@ -17,8 +17,11 @@ public class CharCollisions : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "leaf")
-            hp2.AdjustcurHealth2(10);
+        if (other.gameObject.tag == "leafAttack") { 
+           GameObject charmanderObject = GameObject.Find("Charmander Model");
+		   HealthBar2 adjhealthscript = charmanderObject.GetComponent<HealthBar2>();
+		   adjhealthscript.AdjustcurHealth2(-1);
+		}	
     }
 
 }
