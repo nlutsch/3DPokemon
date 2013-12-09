@@ -4,12 +4,14 @@ using System.Collections;
 
 public class HealthBar : MonoBehaviour
 {
-    private int maxHealth = 100;
-    public int curHealth = 100;
+    private float maxHealth = 100;
+    public float curHealth = 100;
+	public float regeneration = 1;
     private float healthBarlength;
     private int healthbarposition;
-    private int maxPP = 100;
-    public int curPP = 100;
+    private float maxPP = 100;
+    public float curPP = 100;
+	public float ppRegen = 2;
     private float ppBarlength;
     private int ppBarposition;
 
@@ -19,22 +21,22 @@ public class HealthBar : MonoBehaviour
         healthBarlength = Screen.width / 2;
         ppBarlength = Screen.width / 2;
         healthbarposition = 0;
-        ppBarposition = 0;
+        ppBarposition = 20;
     }
 
     // Update is called once per frame
     void Update()
     {
-        AdjustcurHealth(0);
-        AdjustcurPP(0);
+        AdjustcurPP(ppRegen / 100);
+		AdjustcurHealth (0);
     }
     void OnGUI()
     {
-        GUI.Box(new Rect(0, healthbarposition, healthBarlength, 20), "Health" + curHealth + "/" + maxHealth);
-        GUI.Box(new Rect(Screen.width / 2, ppBarposition, ppBarlength, 20), "PP" + curPP + "/" + maxPP);
+        GUI.Box(new Rect(0, healthbarposition, healthBarlength, 20), "Health " + (int)curHealth + "/" + maxHealth);
+        GUI.Box(new Rect(0, ppBarposition, ppBarlength, 20), "PP " + (int)curPP + "/" + maxPP);
     }
 
-    public void AdjustcurHealth(int adj)
+    public void AdjustcurHealth(float adj)
     {
         curHealth += adj;
         if (curHealth < 0)
@@ -43,10 +45,10 @@ public class HealthBar : MonoBehaviour
             curHealth = maxHealth;
         if (maxHealth < 1)
             maxHealth = 1;
-        healthBarlength = (Screen.width / 2) * (curHealth / (float)maxHealth);
+        healthBarlength = (Screen.width / 2) * (curHealth / maxHealth);
     }
 
-    public void AdjustcurPP(int adj)
+    public void AdjustcurPP(float adj)
     {
         curPP += adj;
         if (curPP < 0)
@@ -55,6 +57,6 @@ public class HealthBar : MonoBehaviour
             curPP = maxPP;
         if (maxPP < 1)
             maxPP = 1;
-        ppBarlength = (Screen.width / 2) * (curPP / (float)maxPP);
+        ppBarlength = (Screen.width / 2) * (curPP / maxPP);
     }
 }

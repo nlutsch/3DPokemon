@@ -4,24 +4,23 @@ using System.Collections;
 public class BulbCollisions : MonoBehaviour
 {
 
-    public HealthBar hp;
-
+    GameObject bulbasaurObject;
+	HealthBar adjhealthscript;
     // Use this for initialization
     void Start()
     {
-
+		bulbasaurObject = GameObject.Find("Bulbasaur Model");
+		adjhealthscript = bulbasaurObject.GetComponent<HealthBar>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
+    void Update(){
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "ember")
-            hp.AdjustcurHealth(10);
+           adjhealthscript.AdjustcurHealth(-5);
     }
 
 }
