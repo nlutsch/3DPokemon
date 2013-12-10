@@ -5,10 +5,17 @@ public class CharAttcks : MonoBehaviour {
 
     public GameObject emberPrefab;
     public Camera c;
-
+	GameObject charmanderObject;
+	HealthBar2 adjhealthscript;
+	
+	void Start () {
+		charmanderObject = GameObject.Find("Charmander Model");
+		adjhealthscript = charmanderObject.GetComponent<HealthBar2>();
+	} 
+	
     void Update()
     {
-        if (Input.GetButtonDown("Joystick 2A1"))
+        if (Input.GetButtonDown("Joystick 2A1") && adjhealthscript.curPP2 >= 10)
         {
             attackEmber();
         }
