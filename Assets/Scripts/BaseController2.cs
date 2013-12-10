@@ -17,9 +17,6 @@ public class BaseController2 : MonoBehaviour
     public Camera c2;
     public GameObject char2;
     private Vector3 moveDirection2 = Vector3.zero;
-    private float gravity = 1f;
-    private float groundHeight = 0f;
-    private Vector3 modifiedJumperVelocity = Vector3.zero;
 
     // Use this for initialization
     void Start()

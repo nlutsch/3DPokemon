@@ -55,12 +55,13 @@
      <Compile Include="Assets\Scripts\EmberPrefab.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\HealthBar2.cs" />
-     <Compile Include="Assets\Scripts\LeafAttack.cs" />
      <Compile Include="Assets\Scripts\LeafPrefab.cs" />
      <Compile Include="Assets\Scripts\ListAttacks.cs" />
      <Compile Include="Assets\Scripts\P1J.cs" />
+     <Compile Include="Assets\Scripts\P1J_Mac.cs" />
      <Compile Include="Assets\Scripts\P1K.cs" />
      <Compile Include="Assets\Scripts\P2J.cs" />
+     <Compile Include="Assets\Scripts\P2J_Mac.cs" />
      <Compile Include="Assets\Scripts\P2K.cs" />
      <Compile Include="Assets\Scripts\StartScreen.cs" />
      <None Include="Assets\Models\004 - Charmander\HELP AND README.txt" />

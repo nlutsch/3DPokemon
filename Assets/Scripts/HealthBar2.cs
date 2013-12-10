@@ -11,7 +11,7 @@ public class HealthBar2 : MonoBehaviour
     private int healthbarposition2;
     private float maxPP2 = 100;
     public float curPP2 = 100;
-	public float ppregen2 = 2;
+	public float ppregen2 = 10;
     private float ppBarlength2;
     private int ppBarposition2;
 

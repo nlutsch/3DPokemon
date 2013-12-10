@@ -2,10 +2,13 @@
 using System.Collections;
 
 public class StartScreen : MonoBehaviour {
-	private bool displayLabel = false;
-	void Start(){
+	//private bool displayLabel = false;
+	void Start () {
 		//FlashStart();
-		if (Input.GetButtonDown("Joystick 1A7") || Input.GetButtonDown("Joystick 2A7"))
+		;
+	}
+	 void Update () {
+		if (Input.GetButtonDown("Start 1") || Input.GetButtonDown("Start 2"))
         {
             Application.LoadLevel("main");
         }
