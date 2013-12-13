@@ -44,14 +44,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\BaseController.cs" />
      <Compile Include="Assets\Scripts\BaseController2.cs" />
+     <Compile Include="Assets\Scripts\BasePrefab.cs" />
      <Compile Include="Assets\Scripts\BulbAttcks.cs" />
      <Compile Include="Assets\Scripts\BulbCollisions.cs" />
      <Compile Include="Assets\Scripts\CharAttcks.cs" />
      <Compile Include="Assets\Scripts\CharCollisions.cs" />
      <Compile Include="Assets\Scripts\Ember.cs" />
-     <Compile Include="Assets\Scripts\EmberAttack.cs" />
      <Compile Include="Assets\Scripts\EmberPrefab.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\HealthBar2.cs" />

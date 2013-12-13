@@ -4,7 +4,7 @@ using System.Collections;
 public class BaseController2 : MonoBehaviour
 {
 
-    public float movementSpeed2 = 70.0f;
+    public float movementSpeed2 = 30.0f;
     public float mouseSensitivity2 = 2.0f;
     float verticalRotation2 = 0;
     public float upDownRange2 = 60.0f;
