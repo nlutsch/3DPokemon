@@ -49,7 +49,7 @@ public class BaseController2 : MonoBehaviour
         }
 
         // Jump
-        if (Input.GetButtonDown(jump2))
+        if (Input.GetButtonDown(jump2) && cc2.isGrounded)
         {
             transform.position += transform.up * jumpHeight2;
             //modifiedJumperVelocity.y = jumpHeight2;

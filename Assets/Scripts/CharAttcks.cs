@@ -51,7 +51,7 @@ public class CharAttcks : MonoBehaviour
 		
 		Vector3 charHeight = new Vector3(1f * c.transform.rotation.x, 2.1f, 1.5f * c.transform.rotation.z);
 		Object newTackle = Instantiate(tacklePrefab2, this.transform.position + (charHeight / 2), this.transform.rotation);
-		Destroy (newTackle, .2f);
+		Destroy (newTackle, .3f);
 		
 		CharacterController cc2 = charEmpty.GetComponent<CharacterController>();
 		moveDirection2 = new Vector3(0, 0, 1);

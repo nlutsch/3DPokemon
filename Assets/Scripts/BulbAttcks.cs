@@ -11,6 +11,9 @@ public class BulbAttcks : MonoBehaviour
 	HealthBar adjhealthscript;
 	private float movementSpeed2 = 1000.0f;
 	private Vector3 moveDirection2 = Vector3.zero;
+	private int cycles = 0;
+	private Vector3 force = new Vector3(0, -10000F, 0);
+	
 	
 	void Start () {
 		bulbasaurObject = GameObject.Find("Bulbasaur Model");
@@ -27,7 +30,14 @@ public class BulbAttcks : MonoBehaviour
 		
 		if (Input.GetButtonDown ("Joystick 1A2") && adjhealthscript.curPP >= 5)
 		{
+			cycles = 0;
 			tackle();
+		}
+		
+		if (cycles < 300) 
+		{
+			rigidbody.AddForce (force, ForceMode.Force);
+			cycles++;
 		}
     }
 
@@ -51,7 +61,7 @@ public class BulbAttcks : MonoBehaviour
 		
 		Vector3 bulbHeight = new Vector3(1f * c.transform.rotation.x, 2.1f, 1.5f * c.transform.rotation.z);
 		Object newTackle = Instantiate(tacklePrefab1, this.transform.position + (bulbHeight / 2), this.transform.rotation);
-		Destroy (newTackle, .2f);
+		Destroy (newTackle, .3f);
 		
 		CharacterController cc2 = bulbEmpty.GetComponent<CharacterController>();
 		moveDirection2 = new Vector3(0, 0, 1);

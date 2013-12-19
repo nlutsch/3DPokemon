@@ -14,6 +14,9 @@ public class HealthBar : MonoBehaviour
 	public float ppRegen = 10;
     private float ppBarlength;
     private int ppBarposition;
+	private int livesPosition;
+	private int livesLength;
+	public int lives;
 
     // Use this for initialization
     void Start()
@@ -22,6 +25,9 @@ public class HealthBar : MonoBehaviour
         ppBarlength = Screen.width / 2;
         healthbarposition = 0;
         ppBarposition = 20;
+		livesPosition = 40;
+		livesLength = 20;
+		lives = 3;
     }
 
     // Update is called once per frame
@@ -34,6 +40,7 @@ public class HealthBar : MonoBehaviour
     {
         GUI.Box(new Rect(0, healthbarposition, healthBarlength, 20), "Health " + (int)curHealth + "/" + maxHealth);
         GUI.Box(new Rect(0, ppBarposition, ppBarlength, 20), "PP " + (int)curPP + "/" + maxPP);
+		GUI.TextArea (new Rect(0, livesPosition, livesLength, 20), lives.ToString());
     }
 
     public void AdjustcurHealth(float adj)
@@ -59,4 +66,9 @@ public class HealthBar : MonoBehaviour
             maxPP = 1;
         ppBarlength = (Screen.width / 2) * (curPP / maxPP);
     }
+	
+	public void AdjLives(int adj)
+	{
+		lives--;
+	}
 }
