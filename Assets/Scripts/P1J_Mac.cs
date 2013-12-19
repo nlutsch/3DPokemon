@@ -10,8 +10,8 @@ public class P1J_Mac : BaseController2 {
         ry2 = "Joystick RY1M";
         lx2 = "Joystick LX1";
         ly2 = "Joystick LY1";
-		c2 = GameObject.Find ("camera1").camera;
-		char2 = GameObject.Find ("Bulbasaur Model");
+		//c2 = GameObject.Find ("camera1").camera;
+		//char2 = GameObject.Find ("Bulbasaur Model");
 		Screen.lockCursor = true;
 	}
 }

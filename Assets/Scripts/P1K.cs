@@ -11,8 +11,8 @@ public class P1K : BaseController2
         ry2 = "Mouse Y";
         lx2 = "Horizontal";
         ly2 = "Vertical";
-		c2 = GameObject.Find ("camera1").camera;
-		char2 = GameObject.Find ("Bulbasaur Model");
+		//c2 = GameObject.Find ("camera1").camera;
+		//char2 = GameObject.Find ("Bulbasaur Model");
 		Screen.lockCursor = true;
     }
 }

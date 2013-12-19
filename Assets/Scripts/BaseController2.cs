@@ -63,4 +63,5 @@ public class BaseController2 : MonoBehaviour
 
         cc2.SimpleMove(moveDirection2);
     }
+	
 }
